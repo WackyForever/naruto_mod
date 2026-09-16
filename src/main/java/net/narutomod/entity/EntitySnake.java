@@ -164,7 +164,7 @@ public class EntitySnake extends ElementsNarutomodMod.ModElement {
 		}
 
 		@Override
-		protected void entityInit() {
+		public void entityInit() {
 			super.entityInit();
 			this.getDataManager().register(PHASE, Integer.valueOf(Phase.DEFENSIVE.getID()));
 		}
@@ -1419,5 +1419,6 @@ System.out.println("    pivotNew"+i+":"+pivotNew);
 			modelRenderer.rotateAngleY = y;
 			modelRenderer.rotateAngleZ = z;
 		}
-	}
+
+	}
 }
