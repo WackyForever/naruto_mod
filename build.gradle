@@ -7,18 +7,18 @@ buildscript {
         classpath 'net.minecraftforge.gradle:ForgeGradle:3.+'
     }
 }
-        
+
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 
 version = "1.0"
 group = "com.yourname.modid"
-archivesBaseName = "modid"
+archivesBaseName = "naruto_mod"
 
-sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
+sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
 
 minecraft {
-	mappings channel: 'snapshot', version: '20171003-1.12'
+    mappings channel: 'snapshot', version: '20171003-1.12'
 
     runs {
         client {
@@ -50,7 +50,9 @@ minecraft {
 }
 
 sourceSets {
-    main { output.resourcesDir = output.classesDir }
+    main {
+        output.resourcesDir = output.classesDir
+    }
 }
 
 dependencies {
@@ -58,4 +60,3 @@ dependencies {
 }
 
 apply from: 'mcreator.gradle'
-
